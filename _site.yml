@@ -1,0 +1,18 @@
+name: "Elizabeth Borgognoni"
+output_dir: "."
+navbar:
+  title: "Elizabeth Borgognoni"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "Tutorials"
+      icon: ion-social-github
+      href: tutorial.html
+
+output:
+  html_document:
+    theme: cerulean
+    highlight: default
+    include:
+    css: style.css

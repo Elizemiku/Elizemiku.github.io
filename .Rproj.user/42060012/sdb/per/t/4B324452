@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\n\nshinyUI(fluidPage(\n  titlePanel(\"stockVis\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      helpText(\"Select a stock to examine. \n        Information will be collected from yahoo finance.\"),\n    \n      textInput(\"symb\", \"Symbol\", \"SPY\"),\n    \n      #seletor de intervalo de datas, criado com dateRangeInpute\n      dateRangeInput(\"dates\", \n        \"Date range\",\n        start = \"2013-01-01\", #o intervalo inicial da data\n        end = as.character(Sys.Date())), # o intervalo final será a data de hoje\n      \n      br(),\n      br(),\n      \n      #par de caixas de verificação feitos com checkboxInput\n      #TRUE quando a caixa de seleção está marcada, e FALSE quando a caixa de seleção não está marcada.\n      #log - nome da 1 caixa de seleção\n      #adjust - nome da 2 caixa de seleção\n      \n      checkboxInput(\"log\", \"Plot y axis on log scale\", \n        value = FALSE),\n      \n      checkboxInput(\"adjust\", \n        \"Adjust prices for inflation\", value = FALSE)\n    ),\n    \n    mainPanel(plotOutput(\"plot\"))\n  )\n))\n",
+    "created" : 1490386430003.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1212077321",
+    "id" : "4B324452",
+    "lastKnownWriteTime" : 1473882678,
+    "last_content_update" : 1473882678,
+    "path" : "~/Documents/Aprendendo shiny/LESSON-6/stockVis/ui.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
