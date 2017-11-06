@@ -17,7 +17,8 @@ To run this tutorial, you'll need:
 - Packages: dplyr, tydir, broom, ggplot2, plotly, highcharter
 
 ```{r, eval=FALSE}
-packages = c('dplyr', 'tydir', 'broom', 'ggplot2', 'plotly', 'highcharter')
+packages = c('dplyr', 'tydir', 'broom', 
+  'ggplot2', 'plotly', 'highcharter')
 install.packages(packages)
 ```
 
@@ -70,7 +71,8 @@ dat <- data.frame(
     rating = c(rnorm(50), rnorm(50, mean = 1)))    
 
 mytheme <- theme_dark() + 
-    theme(text = element_text(colour="blue"), axis.title = element_text(size = rel(1.25)))
+    theme(text = element_text(colour="blue"), 
+      axis.title = element_text(size = rel(1.25)))
     #creating my own theme
 
 p<-ggplot(dat, aes(x = cond, y = rating, fill = cond)) +
@@ -78,7 +80,9 @@ p<-ggplot(dat, aes(x = cond, y = rating, fill = cond)) +
     ggtitle("Box Plot") +
     labs(fill="Condition") +
     scale_fill_brewer(palette="Dark2") +
-    geom_text(label = 0) + annotate("text", label = "outlier", x= dat$cond[20], y = 2.6, size = 3, colour = "blue") +
+    geom_text(label = 0) + annotate("text", 
+      label = "outlier", x= dat$cond[20], y = 2.6, 
+      size = 3, colour = "blue") +
     ##add name to the outlier 
     mytheme
     
@@ -93,7 +97,8 @@ dat <- data.frame(
     rating = c(rnorm(50), rnorm(50, mean = 1)))    
 
 mytheme <- theme_dark() + 
-    theme(text = element_text(colour="blue"), axis.title = element_text(size = rel(1.25)))
+    theme(text = element_text(colour="blue"), 
+      axis.title = element_text(size = rel(1.25)))
     #creating my own theme
     
 p<-ggplot(dat, aes(x = cond, y = rating, fill = cond)) +
@@ -101,7 +106,9 @@ p<-ggplot(dat, aes(x = cond, y = rating, fill = cond)) +
     ggtitle("Box Plot") +
     labs(fill="Condition") +
     scale_fill_brewer(palette="Dark2") +
-    geom_text(label = 0) + annotate("text", label = "outlier", x= dat$cond[20], y = 2.6, size = 3, colour = "blue") +
+    geom_text(label = 0) + annotate("text", 
+      label = "outlier", x= dat$cond[20], y = 2.6, 
+      size = 3, colour = "blue") +
     ##add name to the outlier 
     mytheme
     
@@ -158,7 +165,9 @@ a2 <- rnorm(50, 1)
 
 plot_ly(y = a, type = 'box') %>%
     add_trace(y = a2) %>%
-layout(title = 'Box Plot',xaxis = list(title = "cond", showgrid = F), yaxis = list(title = "rating"), 
+layout(title = 'Box Plot',
+  xaxis = list(title = "cond", showgrid = F), 
+  yaxis = list(title = "rating"), 
        annotations = list(
            x = -0.01,
            y = boxplot.stats(a)$out, 
@@ -176,7 +185,9 @@ a2 <- rnorm(50, 1)
 
 plot_ly(y = a, type = 'box') %>%
     add_trace(y = a2) %>%
-layout(title = 'Box Plot',xaxis = list(title = "cond", showgrid = F), yaxis = list(title = "rating"), 
+layout(title = 'Box Plot',
+  xaxis = list(title = "cond", showgrid = F), 
+  yaxis = list(title = "rating"), 
        annotations = list(
            x = -0.01,
            y = boxplot.stats(a)$out, 
@@ -218,7 +229,8 @@ dat <- data.frame(
     cond = (rep(c("trace 0", "trace 1"), each = 50)),
    rating = c(rnorm(50), rnorm(50, mean = 1))
 )
-  hcboxplot(x = dat$rating, var = dat$cond,name = "cond", showInLegend = TRUE) %>% 
+  hcboxplot(x = dat$rating, var = dat$cond,
+    name = "cond", showInLegend = TRUE) %>% 
   hc_chart(type = "column") %>%
   hc_title(text = "Box Plot") 
 ```
@@ -229,7 +241,8 @@ dat <- data.frame(
     cond = (rep(c("trace 0", "trace 1"), each = 50)),
    rating = c(rnorm(50), rnorm(50, mean = 1))
 )
-  hcboxplot(x = dat$rating, var = dat$cond, name = "cond", showInLegend = TRUE) %>% 
+  hcboxplot(x = dat$rating, 
+    var = dat$cond, name = "cond", showInLegend = TRUE) %>% 
   hc_chart(type = "column") %>%
   hc_title(text = "Box Plot") 
 ```
@@ -244,10 +257,11 @@ dat <- data.frame(
 )
 highchart() %>% 
   hc_title(text = "Box Plot") %>%
-  hcboxplot(x = dat$rating, var = dat$cond, name = "cond", showInLegend = TRUE) %>% 
+  hcboxplot(x = dat$rating, 
+    var = dat$cond, name = "cond", showInLegend = TRUE) %>% 
   hc_chart(type = "column") %>%
   hc_legend(align = "right", verticalAlign = "top",
-            layout = "vertical", x = 0, y = 100, enable = TRUE ) %>%
+    layout = "vertical", x = 0, y = 100, enable = TRUE ) %>%
  hc_add_theme(hc_theme_sandsignika())
 ```
 ---
@@ -257,10 +271,11 @@ dat <- data.frame(
     cond = (rep(c("trace 0", "trace 1"), each = 50)),
    rating = c(rnorm(50), rnorm(50, mean = 1))
 )
-  hcboxplot(x = dat$rating, var = dat$cond, name = "cond", showInLegend = TRUE) %>% 
+  hcboxplot(x = dat$rating, var = dat$cond, 
+    name = "cond", showInLegend = TRUE) %>% 
   hc_chart(type = "column") %>%
   hc_legend(align = "right", verticalAlign = "top",
-            layout = "vertical", x = 0, y = 100, enable = TRUE ) %>%
+    layout = "vertical", x = 0, y = 100, enable = TRUE ) %>%
   hc_title(text = "Box Plot") %>%
   hc_add_theme(hc_theme_sandsignika())
 ```
@@ -295,27 +310,31 @@ ggplotly(p)
 ```
 ---
 ##Linear regression using highcharts
-```{r, eval = FALSE}
+```{r, eval = FALSE, warning = FALSE}
 set.seed(1234)
 dat <- data.frame(cond = rep(c("A", "B"), each=50),
                   xvar = 1:50 + rnorm(50,sd=3),
                   yvar = 1:50 + rnorm(50,sd=3))
 
 highchart() %>%
-    hc_add_series(dat, "point", hcaes(xvar, yvar, group = cond), regression = TRUE) %>%
-    hc_add_series(lm(yvar ~ xvar, data = dat), name = "Regression") %>%
+    hc_add_series(dat, "point", 
+      hcaes(xvar, yvar, group = cond), regression = TRUE) %>%
+    hc_add_series(lm(yvar ~ xvar, data = dat), 
+      name = "Regression") %>%
     hc_add_theme(hc_theme_google())
 ```
 ---
-```{r, echo = FALSE}
+```{r, echo = FALSE, warning = FALSE}
 set.seed(1234)
 dat <- data.frame(cond = rep(c("A", "B"), each=50),
                   xvar = 1:50 + rnorm(50,sd=3),
                   yvar = 1:50 + rnorm(50,sd=3))
 
 highchart() %>%
-    hc_add_series(dat, "point", hcaes(xvar, yvar, group = cond), regression = TRUE) %>%
-    hc_add_series(lm(yvar ~ xvar, data = dat), name = "Regression") %>%
+    hc_add_series(dat, "point", 
+      hcaes(xvar, yvar, group = cond), regression = TRUE) %>%
+    hc_add_series(lm(yvar ~ xvar, data = dat), 
+      name = "Regression") %>%
     hc_add_theme(hc_theme_google())
 ```
 ---
@@ -328,12 +347,14 @@ Plotly
 library("dplyr")
 
 set.seed(1234)
-centers <- data.frame(cluster=factor(1:3), size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
+centers <- data.frame(cluster=factor(1:3), 
+  size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
 points <- centers %>% group_by(cluster) %>%
     do(data.frame(x1=rnorm(.$size[1], .$x1[1]),
                   x2=rnorm(.$size[1], .$x2[1])))
 
-p<-ggplot(points, aes(x1, x2, color=cluster)) + geom_point() + ggtitle("Multivariate gaussian")
+p<-ggplot(points, aes(x1, x2, color=cluster)) + 
+  geom_point() + ggtitle("Multivariate gaussian")
   
 ggplotly(p)
 
@@ -344,12 +365,14 @@ ggplotly(p)
 library("dplyr")
 
 set.seed(1234)
-centers <- data.frame(cluster=factor(1:3), size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
+centers <- data.frame(cluster=factor(1:3), 
+  size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
 points <- centers %>% group_by(cluster) %>%
     do(data.frame(x1=rnorm(.$size[1], .$x1[1]),
                   x2=rnorm(.$size[1], .$x2[1])))
 
-p<-ggplot(points, aes(x1, x2, color=cluster)) + geom_point() + ggtitle("Multivariate gaussian")
+p<-ggplot(points, aes(x1, x2, color=cluster)) + 
+  geom_point() + ggtitle("Multivariate gaussian")
   
 ggplotly(p)
 
@@ -362,7 +385,8 @@ Highcharter
 library("dplyr")
 
 set.seed(1234)
-centers <- data.frame(cluster=factor(1:3), size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
+centers <- data.frame(cluster=factor(1:3), 
+  size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
 points <- centers %>% group_by(cluster) %>%
     do(data.frame(x1=rnorm(.$size[1], .$x1[1]),
                   x2=rnorm(.$size[1], .$x2[1])))
@@ -370,7 +394,8 @@ points <- centers %>% group_by(cluster) %>%
 highchart() %>% 
   hc_add_theme(hc_theme_smpl()) %>%
   hc_title(text = "Multivariate gaussian") %>% 
-  hc_add_series(points, type = "scatter", hcaes(x = x1, y = x2, group = cluster), showInLegend = TRUE)
+  hc_add_series(points, type = "scatter", 
+    hcaes(x = x1, y = x2, group = cluster), showInLegend = TRUE)
   
 ```
 ---
@@ -378,7 +403,8 @@ highchart() %>%
 library("dplyr")
 
 set.seed(1234)
-centers <- data.frame(cluster=factor(1:3), size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
+centers <- data.frame(cluster=factor(1:3), 
+  size=c(100, 150, 50), x1=c(5, 0, -3), x2=c(-1, 1, -2))
 points <- centers %>% group_by(cluster) %>%
     do(data.frame(x1=rnorm(.$size[1], .$x1[1]),
                   x2=rnorm(.$size[1], .$x2[1])))
@@ -386,7 +412,8 @@ points <- centers %>% group_by(cluster) %>%
 highchart() %>% 
   hc_add_theme(hc_theme_smpl()) %>%
   hc_title(text = "Multivariate gaussian") %>% 
-  hc_add_series(points, type = "scatter", hcaes(x = x1, y = x2, group = cluster), showInLegend = TRUE)
+  hc_add_series(points, type = "scatter", 
+    hcaes(x = x1, y = x2, group = cluster), showInLegend = TRUE)
 ```
 ---
 
