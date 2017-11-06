@@ -4,7 +4,8 @@ title: "Tutorials"
 
 I like to do interactive graphics so the first tutorial is this : 
 
-* [Interactive graphics](https://github.com/Elizemiku/Interactive-Graphics)
+* <a href="tutorials-r/interactivegraphics.html" target="_blank">interactivegraphics</a> 
+([Github Repository](https://github.com/Elizemiku/Interactive-Graphics))
 
   
 The second is about the ggplot2 themes:
@@ -14,3 +15,4 @@ The second is about the ggplot2 themes:
 
 
 
+ 
