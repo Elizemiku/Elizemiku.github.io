@@ -9,10 +9,18 @@ navbar:
     - text: "Tutorials"
       icon: ion-social-github
       href: tutorial.html
-
+  right:
+    - text: "More"
+      icon: ion-ios-book
+      menu:
+        - text: "Favorite Sites"
+          icon: ion-ios-world-outline
+          href: sites.html 
+            
 output:
   html_document:
-    theme: cerulean
-    highlight: default
+    keep_md: true
+    theme: readable
+    highlight: null
     include:
-    css: style.css
+      css: styles.css
