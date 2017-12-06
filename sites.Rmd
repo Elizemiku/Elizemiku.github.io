@@ -4,6 +4,8 @@ title: "Favorite Sites"
 
 ###About GitHub: 
 
+- [Git](https://git-scm.com/)
+
 - [GitHub](https://github.com/)
 
 - [GitHub guides](https://guides.github.com/)
