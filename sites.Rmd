@@ -15,6 +15,8 @@ title: "Favorite Sites"
 
 - [Advanced R](http://adv-r.had.co.nz/)
 
+- [R bloggers](https://www.r-bloggers.com/)
+
 - [Rstudio](https://www.rstudio.com/)
 
 - [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
@@ -23,6 +25,10 @@ title: "Favorite Sites"
 
 - [Rpubs](http://rpubs.com/)
 
+- [R Weekly](https://rweekly.org/)
+
 - [Packages R](https://www.rstudio.com/products/rpackages/)
 
 - [Shiny](https://shiny.rstudio.com/)
+
+- [UseR!](https://user2018.r-project.org/)
