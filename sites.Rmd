@@ -33,7 +33,7 @@ title: "Favorite Sites"
 
 - [UseR!](https://user2018.r-project.org/)
 
-###Courses 
+###Courses: 
 
 - [Code Academy](https://www.codecademy.com/)
 
