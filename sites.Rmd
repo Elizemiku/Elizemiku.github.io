@@ -32,3 +32,17 @@ title: "Favorite Sites"
 - [Shiny](https://shiny.rstudio.com/)
 
 - [UseR!](https://user2018.r-project.org/)
+
+###Courses 
+
+- [Code Academy](https://www.codecademy.com/)
+
+- [Coursera](https://www.coursera.org/)
+
+- [Data Camp](https://www.datacamp.com/)
+
+- [edX](https://www.edx.org/course)
+
+- [Khan Academy](https://www.khanacademy.org/)
+
+- [Udemy](https://www.udemy.com/)
