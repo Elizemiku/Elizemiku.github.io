@@ -23,7 +23,7 @@ title: "Favorite Sites"
 
 - [R Markdown Websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html)
 
-- [Rpubs](http://rpubs.com/)
+- [Rpubs](http://rpubs.com/) 
 
 - [R Weekly](https://rweekly.org/)
 
@@ -44,5 +44,7 @@ title: "Favorite Sites"
 - [edX](https://www.edx.org/course)
 
 - [Khan Academy](https://www.khanacademy.org/)
+
+- [Udacity](https://br.udacity.com/)
 
 - [Udemy](https://www.udemy.com/)
